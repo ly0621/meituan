@@ -1,0 +1,389 @@
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    //overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: px2rem(50px);
+    @include display(flex);
+    color: #fff;
+    a {
+        color: #fff;
+    }
+    .hleft {
+        width: px2rem(68px);
+        height: px2rem(50px);
+        flex-shrink: 0;
+        text-align: center;
+        line-height: px2rem(50px);
+        background: #05ad9c;
+    }
+    .hright {
+        padding: 0 0 0 px2rem(15px);
+        flex: 1;
+        @include display(flex, row, space-between);
+        background: #06c1ae;
+        .form {
+            flex: 1;
+            height: px2rem(32px);
+            position: relative;
+            input {
+                width: 100%;
+                height: 100%;
+                border-radius: px2rem(5px);
+                border: 0;
+                outline: 0;
+                padding-left: px2rem(25px);
+                background: #05ad9c;
+            }
+            .icon {
+                position: absolute;
+                left: px2rem(8px);
+                top: px2rem(5px);
+            }
+        }
+        .wode {
+            width: px2rem(50px);
+            height: px2rem(50px);
+            text-align: center;
+            @include display(flex, column, center);
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    height: auto;
+}
+
+.pic {
+    width: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #ccc;
+    position: relative;
+    //overflow: hidden;
+    .list {
+        width: 100%;
+        overflow: hidden;
+        @include display(flex);
+        padding-bottom: px2rem(30px);
+        li {
+            width: 100%;
+            flex-shrink: 0;
+            padding: 0 px2rem(15px);
+            .olist {
+                width: 100%;
+                height: 100%;
+                @include display(flex, row, space-between);
+                flex-wrap: wrap;
+                dl {
+                    width: 20%;
+                    @include display(flex, column, center);
+                    padding-top: px2rem(10px);
+                    dt {
+                        width: px2rem(50px);
+                        height: px2rem(50px);
+                        text-align: center;
+                        line-height: px2rem(50px);
+                        border-radius: 50%;
+                        .icon {
+                            color: #fff;
+                            font-size: px2rem(30px);
+                        }
+                    }
+                    dd {
+                        height: px2rem(30px);
+                        line-height: px2rem(30px);
+                        text-align: center;
+                    }
+                    &:nth-child(1) dt {
+                        background: #ff9e21;
+                    }
+                    &:nth-child(2) dt {
+                        background: #ff6563;
+                    }
+                    &:nth-child(3) dt {
+                        background: #8c92ff;
+                    }
+                    &:nth-child(4) dt {
+                        background: #ffd331;
+                    }
+                    &:nth-child(5) dt {
+                        background: #ff9e21;
+                    }
+                    &:nth-child(6) dt {
+                        background: #ffd331;
+                    }
+                    &:nth-child(7) dt {
+                        background: #4ac7ef;
+                    }
+                    &:nth-child(8) dt {
+                        background: #ff82c6;
+                    }
+                    &:nth-child(9) dt {
+                        background: #ff9e21;
+                    }
+                    &:nth-child(10) dt {
+                        background: #5a9eef;
+                    }
+                }
+            }
+        }
+        li:nth-child(2) {
+            transform: translatex3d(100%, 0, 0);
+        }
+    }
+    .oli {
+        width: 100%;
+        height: px2rem(10px);
+        @include display(flex, row, center);
+        position: absolute;
+        bottom: px2rem(10px);
+        li {
+            width: px2rem(8px);
+            height: px2rem(8px);
+            background: #F0EFED;
+            margin: px2rem(5px);
+            border-radius: 50%;
+            &.active {
+                background: #00c3ad;
+            }
+        }
+    }
+}
+
+.box {
+    width: 100%;
+    height: px2rem(15px);
+    background: #f0efed;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.dl {
+    width: 100%;
+    dd {
+        padding: px2rem(10px);
+        @include display(flex, row, flex-end, flex-start);
+        text-align: center;
+        height: px2rem(187px);
+        a {
+            padding: px2rem(10px) px2rem(15px) 0 px2rem(15px);
+            width: 33%;
+            border-right: 1px solid #ccc;
+            height: 100%;
+            &:nth-child(3) {
+                border-right: 0;
+                span:nth-child(1) {
+                    strong {
+                        color: #f741a5;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                span:nth-child(1) {
+                    strong {
+                        color: #ff3c08;
+                    }
+                }
+            }
+            //@include display(flex, column, flex-start, flex-start);
+            span:nth-child(1) {
+                height: 50%;
+                @include display(flex, column, flex-start, flex-start);
+                overflow-x: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                strong {
+                    color: #52a608;
+                    font-size: px2rem(18px);
+                    line-height: 1.5;
+                    font-weight: 400;
+                }
+                small {
+                    color: #636563;
+                    font-size: px2rem(12px);
+                    line-height: 1.5;
+                    margin-top: px2rem(20px);
+                }
+            }
+            span:nth-child(2) {
+                width: 100%;
+                text-align: center;
+                img {
+                    width: 100%;
+                    height: 50%;
+                }
+            }
+            // &:nth-child(1) {
+            //     img {
+            //         position: relative;
+            //         top: px2rem(-5px);
+            //     }
+            // }
+        }
+    }
+}
+
+.piclist {
+    width: 100%;
+    padding-left: px2rem(15px);
+    h1 {
+        width: 100%;
+        height: px2rem(50px);
+        line-height: px2rem(50px);
+        font-size: px2rem(20px);
+        font-weight: 400;
+    }
+    .picolist {
+        width: 100%;
+        padding: px2rem(15px) px2rem(15px) px2rem(15px) 0;
+        border-top: 1px solid #ccc;
+        dl {
+            width: 100%;
+            @include display(flex, row, flex-start, flex-start);
+            dt {
+                width: px2rem(110px);
+                height: px2rem(94px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                flex: 1;
+                padding-left: px2rem(15px);
+                h2 {
+                    font-size: px2rem(18px);
+                    font-weight: 400;
+                    color: #333;
+                }
+                h3 {
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    font-size: px2rem(14px);
+                    font-weight: 400;
+                    color: #333;
+                    margin-bottom: px2rem(15px);
+                }
+                h4 {
+                    @include display(flex, row, space-between);
+                    p {
+                        &:nth-child(2) {
+                            color: #666;
+                        }
+                    }
+                    span:nth-child(1) {
+                        color: #00c3ad;
+                        font-size: px2rem(16px);
+                        b {
+                            color: #00c3ad;
+                            font-size: px2rem(20px);
+                        }
+                    }
+                    span:nth-child(2) {
+                        color: #666;
+                        font-size: px2rem(14px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background: #f0efed;
+    padding: 0 px2rem(15px);
+    >p {
+        height: px2rem(50px);
+        line-height: px2rem(50px);
+        color: #00c3ad;
+    }
+    .nav {
+        width: 100%;
+        height: px2rem(50px);
+        @include display(flex, row, space-between);
+        a {
+            width: 20%;
+            text-align: center;
+            //height: px2rem(50px);
+            border: 1px solid #00c3ad;
+            border-radius: px2rem(5px);
+            padding: px2rem(5px) 0;
+            color: #00c3ad;
+            &:nth-child(3) {
+                text-align: right;
+                border: 0;
+                color: #000;
+            }
+        }
+    }
+    .wode {
+        width: 100%;
+        height: px2rem(80px);
+        @include display(flex, row, space-around, center);
+        a {
+            color: #00c3ad;
+            //padding-right: px2rem(20px);
+            &:after {
+                content: "|";
+                color: #000;
+                padding: 0 px2rem(15px);
+            }
+        }
+        b {
+            color: #00c3ad;
+        }
+    }
+    .find {
+        width: 100%;
+        @include display(flex, row, flex-start, flex-start);
+        p {
+            flex-shrink: 0;
+        }
+        ul {
+            width: 100%;
+            @include display(flex, row, space-between, center);
+            li {
+                width: 33%;
+                text-align: center;
+                color: #00c3ad;
+            }
+        }
+    }
+    .aa {
+        width: 100%;
+        @include display(flex, row, center);
+        a {
+            color: #00c3ad;
+            margin: 0 px2rem(10px);
+        }
+    }
+    h6 {
+        color: #00c3ad;
+        text-align: center;
+    }
+    .add {
+        width: 100%;
+        height: px2rem(60px);
+        @include display(flex, row, space-between, center);
+        p {
+            color: #666;
+        }
+    }
+}
